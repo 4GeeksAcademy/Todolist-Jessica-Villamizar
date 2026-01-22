@@ -1,11 +1,80 @@
-/* 
+body {
+    background-color: linear-grandient(145deg, #1212b1, #1212b1);
+    font-family:"Segoe UI," sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.todo-box {
+    width: 520px;
+    background: linear-gradient(180deg, #0b0b13, #1a0227, #24003a);
+    margin: 60px auto;
+    padding: 32px 32px 24px;
+    border-radius: 18px;
+    box-shadow: 0px 24px 60px rgba(90, 0, 140, 0.45);
+    border:1px solid #723dff;
+}
 
-*/
+
+.todo-box h1 {
+    font-size: 42px;
+    font-weight: 800px;
+    color: #e7d4ff;
+    letter-spacing: 1px;
+    text-shadow: 0 0 6px #a35cff;
+}
+
+.font-control {
+    background: #251138;
+    border: 1px solid #9c6bff;
+    color: #f4eaff;
+    border-radius: 12px;
+}
+
+.font-control::placeholder {
+    color: #860324;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 4px;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(4, 97, 61, 0.018);
+    color: #0b0a0a;
+}
+
+.todo-item:hover {
+    background: rgba(139 80, 255, 0.28);
+    border-radius: 8px;
+    transition: 0.25s ease;
+}
+
+.delete-btn {
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: #0da802;
+    font-weight: 500;
+}
+
+.todo-item:hover    .delete-btn{
+        opacity: 1;
+}
+
+.count {
+    margin-top: 20px;
+    color: #446beb;
+    text-align: left;
+    font-size: 14px;
+}
+
+.empty-msg{
+    padding: 19px;
+    color: #c38bff;
+    font-size: 18px;
+    text-align: center;
+    opacity: 0.7;
+    font-style: italic;
+    letter-spacing: 1px;
+}
