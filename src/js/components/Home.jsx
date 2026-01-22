@@ -8,7 +8,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 const Home = () => {
 
 	const [task, setTask]= useState("")
-	const [taskList, setTaskList]= useState(["Hacer la Tarea", "Limpiar la casa", "Hacer Ejercicios","Dormir la Sieta",])
+	const [taskList, setTaskList]= useState([])
 	function addTask(){
 		setTaskList([...taskList,task])
 	}
@@ -21,7 +21,7 @@ const Home = () => {
         
 
 
-			<h1 className="text-center mt-5">Todo List!</h1>
+			<h1 className="text-center mt-5">Todos</h1>
 			<input type="text" 
 				className="form-control w-25 mx-auto" 
 				placeholder="What needs to be done" 
@@ -37,6 +37,8 @@ const Home = () => {
 			{/* <button className="btn btn-primary" style={{ width: "180px", height: "45px", fontSize: "16px" }} 
 			onClick={() =>addTask ()}>Agrerar Tarea
 			</button> */}
+
+			{taskList.length === 0 && <p className="mt-3">No hay tareas, añadir tareas</p>}
 			
 			<p> {task} </p>
 			{taskList.map((taskItem, index) => <p key={index}>{taskItem}
